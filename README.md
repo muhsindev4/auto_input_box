@@ -2,7 +2,7 @@
 # AutoInputBox Plugin
 
 The **AutoInputBox Plugin** is a Flutter widget that provides an enhanced text input experience with auto-completion functionality. It dynamically filters suggestions as users type and displays them in a dropdown list, making it ideal for search fields, forms, or any text input where suggestions improve the user experience.
-
+![Demo](https://raw.githubusercontent.com/muhsindev4/auto_input_box/refs/heads/main/demo.gif)
 ## Features
 
 -   **Debounced Input Filtering**: Ensures efficient suggestion filtering with customizable debounce time.
