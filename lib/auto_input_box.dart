@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class AutoInputBox<T> extends StatefulWidget {
   /// The text editing controller to manage the input field's text.
   final TextEditingController textEditingController;
@@ -46,8 +44,6 @@ class AutoInputBox<T> extends StatefulWidget {
 }
 
 class _AutoInputBoxState<T> extends State<AutoInputBox<T>> {
-
-
   /// The overlay entry for displaying the suggestions dropdown.
   late OverlayEntry _overlayEntry;
 
@@ -77,9 +73,9 @@ class _AutoInputBoxState<T> extends State<AutoInputBox<T>> {
     // Filter suggestions based on the user's input.
     _filteredSuggestions = widget.suggestions
         .where((item) => widget
-        .toDisplayString(item)
-        .toLowerCase()
-        .contains(text.toLowerCase()))
+            .toDisplayString(item)
+            .toLowerCase()
+            .contains(text.toLowerCase()))
         .toList();
 
     if (_filteredSuggestions.isNotEmpty) {
@@ -107,7 +103,8 @@ class _AutoInputBoxState<T> extends State<AutoInputBox<T>> {
     if (_isOverlayVisible) _removeOverlay(); // Remove any existing overlay.
 
     _overlayEntry = _createOverlayEntry(); // Create a new overlay entry.
-    Overlay.of(context).insert(_overlayEntry); // Insert the overlay into the view.
+    Overlay.of(context)
+        .insert(_overlayEntry); // Insert the overlay into the view.
     _isOverlayVisible = true;
   }
 
@@ -174,7 +171,7 @@ class _AutoInputBoxState<T> extends State<AutoInputBox<T>> {
         controller: widget.textEditingController,
         decoration: widget.inputDecoration,
         style: widget.textStyle,
-        onChanged:_onTextChanged, // Add text changes to the debounce stream.
+        onChanged: _onTextChanged, // Add text changes to the debounce stream.
       ),
     );
   }

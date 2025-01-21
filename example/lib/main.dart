@@ -7,9 +7,6 @@ void main() {
   ));
 }
 
-
-
-
 class Product {
   final String name;
   final double price;
@@ -67,7 +64,8 @@ class InputExampleScreen extends StatelessWidget {
               AutoInputBox<Product>(
                 textEditingController: _productController,
                 suggestions: products,
-                toDisplayString: (product) => '${product.name} - \$${product.price}',
+                toDisplayString: (product) =>
+                    '${product.name} - \$${product.price}',
                 inputDecoration: InputDecoration(
                   labelText: "Product",
                   prefixIcon: Icon(Icons.shopping_bag),
